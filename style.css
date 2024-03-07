@@ -1,0 +1,296 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(167, 215, 243);
+    font-family: Arial, Helvetica, sans-serif;
+}
+ol,
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    display: flex;
+    background-color: rgba(92, 209, 255, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+header a i{
+    background-color: aliceblue;
+    font-size: 10px;
+    padding: 0.5em;
+}
+header nav ul{
+    display: flex;
+    gap: 1.1em;
+}
+header nav ul li a{
+    color: black
+}
+.section-2 img{
+    width: 500px;
+}
+.section-2{
+    width: 432px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    background-color: grey;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+header a:hover{
+    color: cornflowerblue;
+}
+section article{
+    transition: all box-shadow 0.3s ease;
+    background-color: grey;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+section article:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+footer{
+    background-color: rgb(215, 232, 248);
+    padding: 1.1em;
+    color: black;
+}
+footer a{
+    transition: color 0.3s;
+    text-decoration: none;
+    margin-right: 15px;
+    color: black
+}
+footer a:hover{
+    color: cornflowerblue;
+}
+img{
+    font-family: Arial;
+    Border: 5px solid black;
+}
+.img:hover{
+    background-color:grey ;
+}
+.parrafo-2{
+    padding: 15px;
+}
+.parrafo-1{
+    padding: 15px;
+}
+.fuente-acento{
+    padding: 15px;
+}
+
+.acerca-imagen{
+    padding: 15px;
+}
+
+h4{
+    padding: 7px;
+}
+h2{
+    padding: 7px;
+}
+.fa-solid{
+    padding: 8px;
+}
+/*menu*/
+#check{
+    display: none;
+}
+.checkbtm{
+    font-size: 25px;
+    color:azure;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/*MEDIA QUIERES*/
+
+/*estilos para pantallas mas pequeñas (hasta 768px)*/
+@media (max-width: 500px) {
+    /* aqui puedes escribir los estilos que se
+    aplicaran en pantallas mas pequeñas */
+    
+    header{
+        background-color: rgb(207, 227, 245);
+    }
+
+    .acerca-de{
+        text-align: center;
+    }
+    h2.fuente-acento{
+        text-align: center;
+    }
+
+    .checkbtm{
+        display: block;
+    }
+    header ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        text-align: center;
+
+        top: 60px;
+        left: 100%;
+        transition: all 0.5s;
+    }
+    #check:checked ~ ul{
+        left: 0%;
+        display: block;
+    }
+    header nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    header nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ .checkbtm {
+        color:#2c3e50
+    }
+
+}
+/* ----------- Encabezado contacto ----------- */
+
+.form-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-header {
+    text-align: center;
+    background-color: grey;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+
+    width: 80%;
+    margin: 10px auto;
+    padding: 50px;
+}
+
+.form-header h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* ----------- Formulario ----------- */
+
+.formulario {
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+
+    width: 80%;
+    padding: 50px;
+    margin: 30px 0 40px 0;
+}
+
+/* ----------- Campos formulario ----------- */
+
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"]{
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-row label {
+    margin-bottom: 3px;
+    text-align: initial;
+}
+
+/* ----------- Para pantallas de mas de 700px ----------- */
+
+@media only screen and (min-widht: 700px) {
+        .form-header {
+            padding: 50px;
+    }
+
+    .form-row{
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .form-row input[type="text"] {
+        width: 250px;
+        height: initial;
+    }
+    .form-row label {
+        text-align: right;
+        width: 120px;
+        margin-top: 7px;
+        padding-right: 20px;
+    } 
+}
+
+.form-row textarea {
+    font-family: "helvetica", "arial", sans-serif;
+    font-size: 14px;
+
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+
+    width: 100%;
+}
+
+/* ----------------------- para pantallas de mas de 700px ----------------------- */
+
+.form-row button {
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #ffffff;
+    background-color: #5995da;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.form-row button:hover {
+    background-color: #76aeed;
+}
+
+.form-row button:active {
+    background-color: #407fc7;
+}
